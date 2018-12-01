@@ -10,9 +10,12 @@ module.exports = {
   findAll: function(req, res) {
     const { query: params } = req;
     axios
-      .get("https://api.edamam.com/search?app_id=4fec0176&app_key=23011e2e3b3e7246bb96680c9544e972&from=0&to=10&", {
-        params
-      })
+      .get(
+        "https://api.edamam.com/search?app_id=554e0660&app_key=ac065d3761872af25f7f155885604a3c&from=0&to=10&",
+        {
+          params
+        }
+      )
       // .then(results =>
       //   results.data.items.filter(
       //     result =>

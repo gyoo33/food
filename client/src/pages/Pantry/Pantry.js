@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Jumbotron from "../../components/Jumbotron";
 import Card from "../../components/Card";
-import Form from "../../components/Form";
-import Ingredient from "../../components/Ingredient"
+import Form1 from "../../components/Form.1";
+import Ingredient from "../../components/Ingredient";
 import Footer from "../../components/Footer";
 import API from "../../utils/API";
 import { Col, Row, Container } from "../../components/Grid";
@@ -31,10 +31,9 @@ class Home extends Component {
       .then(res => {
         this.setState({
           ingredients: res.data
-        })
+        });
         console.log(this.state.ingredients);
-      }
-      )
+      })
       .catch(err => console.log(err));
   };
 
@@ -57,7 +56,7 @@ class Home extends Component {
     API.saveIngredient({
       name: ingredient,
       Id: ingredient
-    }).then(() => console.log("processed"))
+    }).then(() => console.log("processed"));
     // .then(() => this.getIngredients());
   };
 
@@ -76,13 +75,13 @@ class Home extends Component {
               </h1>
               <h2 className="text-center">Add Ingredient to Your Pantry!</h2>
               {/* <Card title="Ingredient Search" icon="far fa-lemon"> */}
-              <Form
+              <Form1
                 handleInputChange={this.handleInputChange}
                 handleFormSubmit={this.handleFormSubmit}
                 // handleIngredientSave={this.handleIngredientSave}
                 q={this.state.q}
               />
-            {/* </Card> */}
+              {/* </Card> */}
             </Jumbotron>
           </Col>
           {/* <Col size="md-12">
@@ -106,7 +105,9 @@ class Home extends Component {
                       title={ingredient.name}
                       Button={() => (
                         <button
-                          onClick={() => this.handleIngredientDelete(ingredient.Id)}
+                          onClick={() =>
+                            this.handleIngredientDelete(ingredient.Id)
+                          }
                           className="btn btn-danger ml-2"
                         >
                           X
@@ -116,7 +117,7 @@ class Home extends Component {
                   ))}
                 </List>
               ) : (
-                <h2 className="text-center">No Saved Recipes</h2>
+                <h2 className="text-center">Your panty is currently empty!</h2>
               )}
             </Card>
           </Col>
