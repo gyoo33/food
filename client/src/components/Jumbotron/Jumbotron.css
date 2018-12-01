@@ -1,0 +1,18 @@
+.jumbotron {
+  padding: 100px;
+  /* background: none; */
+  /* color: white; */
+  margin-top: 83px;
+  margin-bottom: 83px;
+  /* opacity: .9; */
+  font-family: "Didot 06 A", "Didot 06 B", "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif;
+}
+
+h1 {
+  font-size: 30px;
+
+}
+
+.jumbotron.children {
+  opacity: .5;
+}
